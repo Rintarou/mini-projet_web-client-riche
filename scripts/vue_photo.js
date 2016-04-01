@@ -1,6 +1,7 @@
 $(document).ready(function(){
   var key= "1a2489aa78ceb32dd2478ee997f53e22";
 
+  $("#recherche").on("click", function(){
   $.ajax({
     url:'https://api.flickr.com/services/rest',
     jsoncallback:'jsonFlickrApi',
@@ -8,6 +9,7 @@ $(document).ready(function(){
     type:'GET',
     data:'method=flickr.photos.search&api_key='+key+'&tags=Nantes&format=json&safe_search=1&per_page=10&jsoncallback=?',
   });
+})
 });
 
 function jsonFlickrApi(data) {
