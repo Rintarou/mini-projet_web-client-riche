@@ -1,0 +1,71 @@
+<html>
+<head>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+
+<script src = "http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src = "http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<script type="text/javascript" src="scripts/autocompl.js"></script>
+<link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+
+<body>
+
+	<h1>Recherche d'image</h1>
+
+	<div class="container">
+
+		<form>
+		<p class="question">Entrer une commune:</p>
+		<input id="commune" type="text" name="commune"> 
+
+		<br/>
+
+		<p class="question">Entrer le nombre d'image que vous voulez:</p>
+		<input id="nombre" type="number">
+
+		<br/><br/>
+
+		<button id="recherche"><img src="Loupe.png"  alt="Rechercher" style="width:30px;height:30px;"></button>
+
+		<br/><br/>
+
+		</form>
+	</div>	
+
+<div id="onglet1">
+	<ul>
+		<li><a href = "#onglet2">Photo</a></li>
+		<li><a href = "#onglet3">Tableau</a></li>
+	</ul>	
+
+	<div id="onglet2">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+	</div>
+
+
+	<div id="onglet3">
+			<ul>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+			</ul>
+	</div>
+
+</div>
+
+<div id="modale" title="Erreur"><p>Aucunes images n'a ete trouve</p></div>
+
+<a href="#" id="boutonDeTest">Test pour fenetre modale</a>
+
+</body>
+</html>
