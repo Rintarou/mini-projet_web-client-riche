@@ -7,18 +7,10 @@ $(document).ready(function(){
 
       $.ajax({
         url:'http://infoweb-ens/~jacquin-c/codePostal/commune.php',
+        jsoncallback:'jsonAutoComplete',
+        datatype:'jsonp',
         type:'GET',
-        dataType:'json',
         data:'commune='+$("#commune").val()+"&maxRows=10",
-
-        success:function(data){
-          response($.map(data, function(valeur){
-                return {
-                  label:valeur.Ville,
-                  valeur:valeur.Ville,
-                }
-          }));
-        }
       })
     },
 
@@ -26,8 +18,6 @@ $(document).ready(function(){
     select : function(event, ui){
       $("commune").text(ui.item.value);
     },
-
-
   });
 
    $( "#onglet1" ).tabs();
@@ -41,6 +31,13 @@ $(document).ready(function(){
       event.preventDefault();
       $("#modale").dialog("open");
    });
-
-
 });
+
+function jsonAutoComplete(data) {
+  response($.map(data, function(valeur){
+    return {
+      label:valeur.Ville,
+      valeur:valeur.Ville,
+    }
+  }));
+}
